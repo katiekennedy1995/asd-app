@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<html lang="en">
+   <body bgcolor="#0e0e70">
+      <div>
+         <!--    <button type="button"  onClick = "this.style.visibility= 'hidden';" class="btn btn-success btn-block" (click)="show = !show">{{show ? 'START GAME' : 'END GAME'}}</button>
+            <br>
+            <div *ngIf="!show">
+                <div class="popup" onclick="myFunction()">CLICK
+  <span class="popuptext" id="myPopup">WINNER</span>
+</div>
+-->
+
+
+<div class="w3-container">
+  <h2>W3.CSS Modal</h2>
+  <p>In this example we demonstrate how to close the modal by clicking outside of the modal box.</p>
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+  <div id="id01" class="w3-modal">
+<div class="w3-modal-content w3-animate-zoom">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p>You have two options to close this modal:</p>
+        <p>Click on the "x" or click anywhere outside of the modal!</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+         <div id="wrapper" align="center">
+            <img class="happy" img src='../../assets/happy.PNG' alt="happy" img id="HAPPY"> 
+            <img class="sad" img src='../../assets/sad.PNG' alt="sad" img id="SAD">
+            <img class="embarrassed" img src='../../assets/embarrassed.PNG' alt="embarrassed" img id="EMBARRASSED">
+            <img class="sleepy" img src='../../assets/sleepy.PNG' alt="sleepy" img id="SLEEPY">
+            <img class="stressed" img src='../../assets/stressed.PNG' alt="stressed" img id="STRESSED">
+            <img class="suprised" img src='../../assets/suprised.PNG' alt="suprised" img id="SUPRISED">
+            <img class="excited" img src='../../assets/excited.PNG' alt="excited" img id="EXCITED">
+         </div>
+         <button id='randomize' >START GAME</button>
+
+
+
+         <!--emotions -->
+            <div class="grid grid-pad" align="center">
+               <a *ngFor="let emotion of emotions" class="col-1-3"  (click)="submitEmotion($event, emotion.name)">
+               <div class="module emotion">
+                  <h4>{{emotion.name}}</h4>
+               </div>
+               </a>
+            </div>
+            <!--emotions closed -->
+
+
+
+
+
+
+
+
+
+               
+         
+      </div>
+      
+      <!--div for startt button -->
+   </body>
+</html>
+<emotion-search></emotion-search>
