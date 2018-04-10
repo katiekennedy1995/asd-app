@@ -13,9 +13,20 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from 'in-memory-data.service';
 //import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { HttpModule } from '@angular/http';
-import { LoginComponent } from './login.component';
+//import { LoginComponent } from './login.component';
+
 
 import { FormsModule }   from '@angular/forms';
+
+
+
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './_guards/index';
+import { JwtInterceptorProvider, ErrorInterceptorProvider } from './_helpers/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { HomeComponent } from './home/index';
+import { LoginComponent } from './login/index';
+import { RegisterComponent } from './register/index';
 
 
 
@@ -23,11 +34,15 @@ import { FormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+  //  LoginComponent,
     DashboardComponent,
     EmotionsComponent,
     EmotionSearchComponent,
     EmotionDetailComponent,
+    AlertComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent
   ],
     
 
@@ -37,15 +52,22 @@ import { FormsModule }   from '@angular/forms';
     HttpClientModule,
     HttpModule,
     FormsModule,
+
  //   BootstrapModalModule,
-    HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
+  HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
 
   ],
 
   providers:[
-
   EmotionService,
   MessageService,
+   AuthGuard,
+        AlertService,
+        AuthenticationService,
+        UserService,
+        JwtInterceptorProvider,
+        ErrorInterceptorProvider
+
 
   ],
   bootstrap: [AppComponent]

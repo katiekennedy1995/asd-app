@@ -1,14 +1,9 @@
-import { OnInit,Component} from '@angular/core';
-
-import { Observable } from 'rxjs/Observable';
-
+import { Component } from '@angular/core';
 
 @Component({
-
-  selector: 'app-root',
-  templateUrl: './app.component.html',
- // styleUrls: ['./app.component.css']
+    moduleId: module.id,
+    selector: 'app',
+    templateUrl: 'app.component.html'
 })
-export class AppComponent{
 
-}
+export class AppComponent { }

@@ -1,0 +1,5 @@
+{
+    "connectionString": "mongodb://mongodb3884kk:ny9jot@danu7.it.nuigalway.ie:8717/mongodb3884",
+    "apiUrl": "http://localhost:4000",
+    "secret": "Bearer"
+}

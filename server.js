@@ -1,4 +1,4 @@
-var MongoClient = require('mongodb').MongoClient;
+/*var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://mongodb3884kk:ny9jot@danu7.it.nuigalway.ie:8717/mongodb3884";
 
 
@@ -12,3 +12,4 @@ MongoClient.connect(url, function(err, db) {
     db.close();
   });
 });
+*/
